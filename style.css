@@ -1,0 +1,112 @@
+:root {
+  --bg: #0f1117;
+  --panel: #161923;
+  --border: #262b3a;
+  --text: #e6e8ef;
+  --muted: #8a90a2;
+  --buy: #2fd66b;
+  --sell: #ff5c5c;
+  --neutral: #f5a623;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.status {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+button {
+  background: #262b3a;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+button:hover { background: #333a4d; }
+
+main { padding: 20px 28px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+tr:last-child td { border-bottom: none; }
+
+.empty { text-align: center; color: var(--muted); padding: 30px; }
+
+.buy { color: var(--buy); font-weight: 600; }
+.sell { color: var(--sell); font-weight: 600; }
+.neutral { color: var(--neutral); font-weight: 600; }
+
+.webhook-info {
+  margin-top: 26px;
+  padding: 16px 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.webhook-info h2 {
+  font-size: 1rem;
+  margin: 0 0 8px 0;
+}
+
+.webhook-info code {
+  display: inline-block;
+  background: #0d0f16;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--buy);
+  word-break: break-all;
+}

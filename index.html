@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MTF-Confluence Signal Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Multi-TF Confluence — Symbols List</h1>
+    <div class="controls">
+      <span id="status" class="status">connecting…</span>
+      <button id="clearBtn">Clear All</button>
+    </div>
+  </header>
+
+  <main>
+    <table id="symbolTable">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Signal</th>
+          <th>Entry</th>
+          <th>Stop Loss</th>
+          <th>Target</th>
+          <th>Qty</th>
+          <th>Score</th>
+          <th>Last Update</th>
+        </tr>
+      </thead>
+      <tbody id="symbolBody">
+        <tr><td colspan="8" class="empty">No alerts received yet.</td></tr>
+      </tbody>
+    </table>
+
+    <section class="webhook-info">
+      <h2>Webhook URL</h2>
+      <p>Point your TradingView alert (condition: "Any alert() function call") to:</p>
+      <code id="webhookUrl">/webhook</code>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
